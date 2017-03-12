@@ -48,9 +48,6 @@ void Reset() {
 }
 
 void draw() {
-  //for debug
-  //background(255);
-
   if (sw.GetSeconds() >= 90) {
     Reset();
   }
@@ -64,15 +61,6 @@ void draw() {
       PVector v = PVector.fromAngle(angle).setMag(1);
       flowField[index] = v;
       xoff+= inc;
-
-      //use for debug
-      //stroke(0);
-      //pushMatrix();
-      //strokeWeight(1);
-      //translate(x*scl, y*scl);
-      //rotate(v.heading());
-      //line(0, 0, scl, 0);
-      //popMatrix();
     }
     yoff +=inc;
     zoff +=zinc;
