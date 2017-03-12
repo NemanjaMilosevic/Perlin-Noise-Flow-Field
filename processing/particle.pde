@@ -40,19 +40,6 @@ class Particle {
 
   void Show() {
     stroke(0,3);
-    //if (h == 255) {
-    //  forward = false;
-    //} 
-    //if (h==0) {
-    //  forward = true;
-    //}
-    //if (forward) {
-    //  h = h+0.5;
-    //} 
-    //if (!forward) {
-    //  h = h-0.5;
-    //}
-    //stroke(h, 255, 255, 3);
     strokeWeight(1);
     line(pos.x, pos.y, prevPos.x, prevPos.y);
     UpdatePrevious();
@@ -85,13 +72,5 @@ class Particle {
     int index = x+y*cols;
     if(index>=vectors.length){return;}
     ApplyForce(vectors[index]);
-
-    //debug for vector array
-    //if (ind >= vectors.length) {
-    //  println(cols);
-    //  println(x + " " + y);
-    //  println(ind);
-    //  println("PROBLEMAS");
-    //}
   }
 }
